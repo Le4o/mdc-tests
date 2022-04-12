@@ -1,8 +1,12 @@
-const mdc = (a, b) => {
-  a = Math.abs(a);
-  b = Math.abs(b);
+const abs = (n) => {
+  if (n < 0) return n * -1;
+  return n;
+};
 
+const mdc = (a, b) => {
   let rest;
+  a = abs(a);
+  b = abs(b);
 
   if (b > 0) {
     do {
@@ -15,4 +19,4 @@ const mdc = (a, b) => {
   return a;
 };
 
-module.exports = { mdc };
+module.exports = { mdc, abs };
