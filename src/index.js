@@ -1,6 +1,17 @@
 const mdc = (a, b) => {
-  if (b > 0 && a % b === 0) return b;
+  
+  let rest;
+
+  if (b > 0) {
+    do {
+      rest = a % b;
+      a = b;
+      b = rest;
+    } while (rest !== 0);
+  }
+
   return a;
 };
 
 module.exports = { mdc };
+

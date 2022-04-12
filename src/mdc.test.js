@@ -51,3 +51,16 @@ describe.each([
     });
   }
 );
+
+// Sixth Property
+describe.each([
+  [1, 0],
+  [4, 6],
+])(
+  "mdc(a, b) = mdc(b, a)",
+  (a, b) => {
+    test(`given a=${a}, b=${b}`, () => {
+      expect(mdc(a, b)).toBe(mdc(b, a));
+    });
+  }
+);
