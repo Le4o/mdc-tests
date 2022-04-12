@@ -12,3 +12,16 @@ describe.each([
     });
   }
 );
+
+// Second Property
+describe.each([
+  [16, 8, 4],
+  [15, 5, 5],
+])(
+  "any number that is a commons divisor of a and b is also a divisor of mdc(a, b)",
+  (a, b, divisor) => {
+    test(`given a=${a}, b=${b}`, () => {
+      expect(mdc(a, b) % divisor).toBe(0);
+    });
+  }
+);
