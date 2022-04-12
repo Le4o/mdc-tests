@@ -1,6 +1,19 @@
 const { mdc } = require(".");
 
 // First Property
-test("when b > 0 and is a divider from a, then mdc(a,b) = b", () => {
-  expect(mdc(6, 3)).toBe(3);
+describe("when b > 0 and is a divider from a, then mdc(a,b) = b", () => {
+  test("when a is a pair number", () => {
+    let a = 6;
+    let b = 3;
+    let expectedValue = 3;
+
+    expect(mdc(a, b)).toBe(expectedValue);
+  });
+  test("when a is a odd number", () => {
+    let a = 9;
+    let b = 3;
+    let expectedValue = 3;
+
+    expect(mdc(a, b)).toBe(expectedValue);
+  });
 });
