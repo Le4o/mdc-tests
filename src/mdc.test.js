@@ -98,3 +98,19 @@ describe.each([[1], [4]])(
     });
   }
 );
+
+// Ninth Property
+describe.each([
+  [8, 4, 2],
+  [16, 2, 8],
+  [5, 5, 0],
+  [7, 3, 1],
+])(
+  "the common divisor is an associative operation: mdc(a, mdc(b, c)) = mdc(mdc(a, b), c) = mdc(a, b, c)",
+  (a, b, c) => {
+    test(`given a=${a}, b=${b} and c=${c}`, () => {
+      expect(mdc(a, b, c)).toBe(mdc(a, mdc(b, c)));
+      expect(mdc(a, b, c)).toBe(mdc(mdc(a, b), c));
+    });
+  }
+);

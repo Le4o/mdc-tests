@@ -3,7 +3,7 @@ const abs = (n) => {
   return n;
 };
 
-const mdc = (a, b) => {
+const mdc = (a, b, c) => {
   let rest;
   a = abs(a);
   b = abs(b);
@@ -13,6 +13,16 @@ const mdc = (a, b) => {
       rest = a % b;
       a = b;
       b = rest;
+    } while (rest !== 0);
+  }
+
+  if (c) {
+    c = abs(c);
+
+    do {
+      rest = a % c;
+      a = c;
+      c = rest;
     } while (rest !== 0);
   }
 
