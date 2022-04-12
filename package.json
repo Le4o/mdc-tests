@@ -1,0 +1,14 @@
+{
+  "name": "mdc-tdd",
+  "version": "1.0.0",
+  "description": "College exercise to learn TDD",
+  "main": "index.js",
+  "author": "Leonardo de Andrade <devleonardoandrade@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "jest": "^27.5.1"
+  }
+}
