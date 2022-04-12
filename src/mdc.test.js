@@ -38,3 +38,16 @@ describe.each([
     });
   }
 );
+
+// Fourth Property
+describe.each([
+  [5, 6, 3, 15],
+  [4, 6, 0, 24],
+])(
+  "if m is a non-negative integer then mdc(m*a, m*b) = m*mdc(a, b)",
+  (m, a, b, expected) => {
+    test(`given m=${m}, a=${a}, b=${b}`, () => {
+      expect(mdc(m*a, m*b)).toBe(m*mdc(a, b));
+    });
+  }
+);
