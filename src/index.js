@@ -1,5 +1,7 @@
 const mdc = (a, b) => {
-  
+  a = Math.abs(a);
+  b = Math.abs(b);
+
   let rest;
 
   if (b > 0) {
@@ -14,4 +16,3 @@ const mdc = (a, b) => {
 };
 
 module.exports = { mdc };
-

@@ -75,6 +75,20 @@ describe.each([
   });
 });
 
+// Seventh Property
+describe.each([
+  [8, 4],
+  [16, 2],
+  [5, 5],
+  [7, 0],
+])("mdc(-a, b) = mdc(a, -b) = mdc(-a, -b) = mdc(a, b)", (a, b) => {
+  test(`given a=${a}, b=${b}`, () => {
+    expect(mdc(a, b)).toBe(mdc(-a, b));
+    expect(mdc(a, b)).toBe(mdc(a, -b));
+    expect(mdc(a, b)).toBe(mdc(-a, -b));
+  });
+});
+
 // Eighth Property
 describe.each([[1], [4]])(
   "if a is a positive integer then mdc(a, a) = a",
