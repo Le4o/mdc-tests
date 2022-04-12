@@ -64,3 +64,16 @@ describe.each([
     });
   }
 );
+
+// Eighth Property
+describe.each([
+  [1],
+  [4],
+])(
+  "if a is a positive integer then mdc(a, a) = a",
+  (a, expected) => {
+    test(`given a=${a}`, () => {
+      expect(mdc(a, a)).toBe(a);
+    });
+  }
+);
