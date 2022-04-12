@@ -25,3 +25,16 @@ describe.each([
     });
   }
 );
+
+// Third Property
+describe.each([
+  [16, 0, 16],
+  [15, 0, 15],
+])(
+  "considering that all numbers are factors of 0 then mdc(a, 0) = |a|",
+  (a, b, expected) => {
+    test(`given a=${a}, b=${b}`, () => {
+      expect(mdc(a, b)).toBe(expected);
+    });
+  }
+);
